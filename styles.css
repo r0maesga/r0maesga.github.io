@@ -8,6 +8,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+p, h1, h3 {
+    cursor: defaut;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -174,6 +178,7 @@ span.yo{
 
 span.yo:hover {
     text-shadow: 0 0 0.7rem #ff9531;
+    cursor: default;
 }
 
 .contenido-inicio h3 {
@@ -194,6 +199,7 @@ span.yo:hover {
 #fotoyo:hover {
     box-shadow: 0 0 2.5rem #ff9531;
     transform: scale(1.03);
+    cursor: default;
 }
 
 section.btn {
