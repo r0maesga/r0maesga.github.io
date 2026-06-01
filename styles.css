@@ -16,10 +16,6 @@ body {
     color: #CECCD4;
 }
 
-a {
-    color: #fff;
-}
-
 header {
     margin-top: auto;
     position: fixed;
@@ -100,7 +96,27 @@ nav a:hover, nav a.active {
         font-size: 2rem;
     }
 }
-    
+
+.back-btn a {
+    position: absolute;
+    top: 13.5%;
+    left: 5%;
+    margin-bottom: 0;
+    color: #ff9531;
+    border: #ff9531 0.1rem solid;
+    padding: 0.5rem 0.9rem 0.5rem 0.8rem;
+    border-radius: 0.2rem;
+    scale: 1.7;
+    transition: 0.3s ease;
+}
+
+.back-btn a:hover {
+    background-color: #ff9531;
+    color: #110229;
+    box-shadow: 0 0 1.3rem #ff9531;
+    text-shadow: 0 0 0.3rem #110929;
+}
+
 section.inicio {
     width: 100%;
     min-height: 95vh;
@@ -119,8 +135,9 @@ section.sobre-mi {
     padding: 5rem 9%;
 }
 
-.biografia, .vision {
+.biografia, .vision, .glosario {
     border: #ff9531 0.2rem solid;
+    box-shadow:  0 0 1.5rem #ff9531;
     padding: 2rem;
     border-radius: 1rem;
     margin-top: 4rem;
@@ -150,8 +167,13 @@ section.about-ai {
     line-height: 1.3;
 }
 
-span {
+span.yo{
     color: #ff9531;
+    text-shadow: 0 0 0.3rem #ff9531;
+}
+
+span.yo:hover {
+    text-shadow: 0 0 0.7rem #ff9531;
 }
 
 .contenido-inicio h3 {
@@ -205,6 +227,28 @@ section.btn {
     text-shadow: 0 0 0.3rem #110929;
 }
 
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-link, .contacto span {
+    color: #ceccd4;
+    transition: 0.3s ease;
+}
+
+.contacto-link:hover {
+    color: #ff9531;
+    text-shadow: 0 0 0.3rem #ff9531;
+    scale: 1.1;
+}
+.contacto span:hover {
+    color: #ff9531;
+    transition: 0.3s ease;
+}
 footer {
     background: #110229;
     color: #ceccd4;
