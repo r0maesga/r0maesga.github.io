@@ -8,8 +8,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-p, h1, h3 {
-    cursor: defaut;
+p, h1, h2, h3, h4, h5, h6 {
+    cursor: default;
 }
 
 body {
@@ -38,7 +38,9 @@ header {
 
 .logo {
     font-size: 2.5rem;
-    color: #ff9531;
+    color: transparent;
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    background-clip: text;
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
@@ -115,9 +117,11 @@ nav a:hover, nav a.active {
 }
 
 .back-btn a:hover {
-    background-color: #ff9531;
+    scale: 1.9;
+    border: none;
+    background: linear-gradient(135deg, #ffc531, #ff9531, #ff5531);
     color: #110229;
-    box-shadow: 0 0 1.3rem #ff9531;
+    box-shadow: 0 0 1.3rem #ff5a31;
     text-shadow: 0 0 0.3rem #110929;
 }
 
@@ -139,9 +143,44 @@ section.sobre-mi {
     padding: 5rem 9%;
 }
 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.biografia::after, .biografia::before, .vision::after, .vision::before, .glosario::after, .glosario::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    background: conic-gradient( from var(--angle) at 50% 50%, #ff9531, #ff3831, #ff5a31, #ff9531);
+    z-index: -1;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    animation: spin 4s linear infinite;
+}
+
+.biografia::before, .vision::before, .glosario::before {
+    filter: blur(1.1rem);
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
 .biografia, .vision, .glosario {
-    border: #ff9531 0.2rem solid;
-    box-shadow:  0 0 1.5rem #ff9531;
+    background: #0b0014;
+    position: relative;
     padding: 2rem;
     border-radius: 1rem;
     margin-top: 4rem;
@@ -172,13 +211,10 @@ section.about-ai {
 }
 
 span.yo{
-    color: #ff9531;
-    text-shadow: 0 0 0.3rem #ff9531;
-}
-
-span.yo:hover {
-    text-shadow: 0 0 0.7rem #ff9531;
-    cursor: default;
+    color: transparent;
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .contenido-inicio h3 {
@@ -191,17 +227,15 @@ span.yo:hover {
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 1.5rem #b76d4b;
     cursor: pointer;
     transition: 0.2s linear;
+    box-shadow: 0 0 2rem 0.2rem #ff9c31;
 }
-
 #fotoyo:hover {
-    box-shadow: 0 0 2.5rem #ff9531;
-    transform: scale(1.03);
+    scale: 1.02;
+    box-shadow: 0 0 2rem 0.5rem #ff9c31;
     cursor: default;
 }
-
 section.btn {
     display: flex;
     justify-content: center;
@@ -216,21 +250,22 @@ section.btn {
     margin: 0 0.5rem 5% 0.5rem;
     display: inline-block;
     padding: 30px 90px;
-    background-color: transparent;
+    background: transparent;
     color: #ff9531;
     border: 2px solid #ff9531;
     text-decoration: none;
     border-radius: 19px;
     font-size: 32px;
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .button-link:hover {
-    transform: scale(1.1);
-    background-color: #ff9531;
+    border: none;
+    scale: 1.1;
+    background: linear-gradient(135deg, #ffc531, #ff9531, #ff5531);
     color: #110229;
-    box-shadow: 0 0 1.3rem #ff9531;
-    text-shadow: 0 0 0.3rem #110929;
+        box-shadow: 0 0 1.3rem #ff5a31;
+        text-shadow: 0 0 0.3rem #110929;
 }
 
 .contacto {
@@ -262,4 +297,3 @@ footer {
     border-top: 1px solid #ff9531;
     text-align: center;
 }
-
