@@ -1,63 +1,337 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre la IA</title>
-    <script src="https://kit.fontawesome.com/e447f121ba.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles.css" type="text/css">
-</head>
-<body>
-    <header>
-        <a href="#" class="logo">PORTAFOLIO</a>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    cursor: default;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    background: linear-gradient(135deg, #110229 0%, #0b0014 100%);
+    color: #CECCD4;
+}
+
+header {
+    margin-top: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: #0b0014;
+    border-bottom: 0.2rem solid #ff9531;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
+
+.logo {
+    font-size: 2.5rem;
+    color: transparent;
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    background-clip: text;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    scale: 1.2;
+    color: #fff;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 0.2rem solid transparent;
+}
+
+nav a:hover, nav a.active {
+    color: #ff9531;
+    border-bottom: 0.2rem solid #ff9531;
+}
+
+@media (max-width: 935px) {
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 25%;
+        border-left: 0.2rem solid #ff9531;
+        border-bottom: 0.2rem solid #ff9531;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem 0;
+        background-color: #0b0014;
+    }
     
-        <nav>
-            <a href="./index.html">Inicio</a>
-            <a href="./sobre-mi.html">Sobre mi</a>
-            <a href="#" class="active">Sobre la IA</a>
-        </nav>
-    </header>
-    <section class="about-ai">
-        <div class="back-btn">
-            <a href="./index.html"><i class="fa-solid fa-angle-left"></i></a>
-        </div>
-        <div class="ethic-analysis">
-            <h1 class="titulo-seccion">Análisis Ético</h1>
-            <br>
-            <h3><strong>Sesgos Algorítmicos</strong> Los modelos de IA aprenden de datos históricos que pueden contener prejuicios sociales. Esto genera discriminación en contratación, crédito, justicia penal y salud. Ejemplo: Sistemas de reconocimiento facial con mayor tasa de error en personas de piel oscura o mujeres. Mitigación: Auditorías de sesgo, conjuntos de datos más diversos, técnicas de equidad algorítmica (fairness-aware ML).</h3>
-            <br>
-            <h3><strong>Privacidad y Datos</strong> Los sistemas de IA consumen enormes cantidades de datos personales, generando tensión entre utilidad y privacidad. Riesgos: Vigilancia masiva, reidentificación de datos anónimos, uso secundario no autorizado de información. Marco legal: GDPR (Europa), leyes de protección de datos nacionales, y conceptos como el derecho al olvido.</h3>
-            <br>
-            <h3><strong>Futuro Laboral</strong> La automatización impulsada por IA transforma el mercado de trabajo. Algunos empleos desaparecen; otros se transforman; y emergen nuevas profesiones. Empleos en riesgo: Tareas repetitivas, procesamiento de datos, atención al cliente básica. Perspectiva: La IA como herramienta de amplificación humana, no solo sustitución. Importancia de la reskilling y alfabetización digital.</h3>
-        </div>
-        <div class="glosario">
-            <h1 class="titulo-seccion">Glosario</h1>
-            <br>
-            <ol>
-                <li><h3><strong>Intaligencia Artificial</strong>: Es la rama de la informática que busca crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como aprender, reconocer patrones o tomar decisiones.</h3></li>
-                <br>
-                <li><h3><strong>Machine Learning</strong>: Es una subárea de la IA donde los sistemas aprenden a partir de datos en lugar de seguir únicamente reglas programadas de forma explícita. </h3></li>
-                <br>
-                <li><h3><strong>Deep Learning</strong>: Es un enfoque de machine learning que utiliza redes neuronales con múltiples capas para modelar y comprender datos complejos.</h3></li>
-                <br>
-                <li><h3><strong>Generative AI</strong>: Es un tipo de inteligencia artificial capaz de crear contenido nuevo, como texto, imágenes o música, a partir de patrones aprendidos en datos existentes.</h3></li>
-                <br>
-                <li><h3><strong>LLM</strong>: Es un tipo de modelo de lenguaje grande que puede generar texto coherente y relevante basado en las entradas proporcionadas.</h3></li>
-                <br>
-                <li><h3><strong>red Neuronal</strong>: Es un modelo computacional inspirado en la estructura del cerebro humano, compuesto por nodos interconectados que procesan información.</h3></li>
-                <br>
-                <li><h3><strong>procesamiento del lenguaje natural</strong>: Es una rama de la inteligencia artificial que se enfoca en la interacción entre los humanos y las máquinas a través del lenguaje natural.</h3></li>
-                <br>
-                <li><h3><strong>Algoritmo</strong>: Es un conjunto de instrucciones sistemáticas y bien definidas que permiten resolver un problema o realizar una tarea específica.</h3></li>
-                <br>
-                <li><h3><strong>Prompt</strong>: Es una entrada o instrucción dada a un modelo de inteligencia artificial para generar una respuesta o contenido específico.</h3></li>
-                <br>
-                <li><h3><strong>Alucinación</strong>: Es cuando un modelo de IA genera información que parece plausible pero que no es verdadera o no tiene base en los datos de entrenamiento.</h3></li>
-            </ol>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2026 Mi Portafolio. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.8rem;
+        margin: 2.8rem 0;
+    }
+
+    nav a:hover, nav a.active {
+        padding-bottom: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .contenido-inicio h1 {
+        position: relative;
+        font-size: 3rem;
+    }
+
+    .contenido-inicio h3 {
+        font-size: 2rem;
+    }
+}
+
+.back-btn a {
+    position: absolute;
+    top: 13.5%;
+    left: 5%;
+    margin-bottom: 0;
+    color: #ff9531;
+    border: #ff9531 0.1rem solid;
+    padding: 0.5rem 0.9rem 0.5rem 0.8rem;
+    border-radius: 0.2rem;
+    scale: 1.7;
+    transition: 0.3s ease;
+}
+
+.back-btn a:hover {
+    scale: 1.9;
+    border: none;
+    background: linear-gradient(135deg, #ffc531, #ff9531, #ff5531);
+    color: #110229;
+    box-shadow: 0 0 1.3rem #ff5a31;
+    text-shadow: 0 0 0.3rem #110929;
+}
+
+section.inicio {
+    width: 100%;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 9%;
+}
+
+section.sobre-mi {
+    margin-top: 4rem;
+    width: 100%;
+    min-height: 95vh;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 9%;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.biografia::after, .biografia::before, .vision::after, .vision::before, .glosario::after, .glosario::before, .ethic-analysis::after, .ethic-analysis::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 99.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    background: conic-gradient( from var(--angle) at 50% 50%, #ff9531, #ff3831, #ff5a31, #ff9531);
+    z-index: -1;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    animation: spin 4s linear infinite;
+}
+
+.biografia::before, .vision::before, .glosario::before, .ethic-analysis::before {
+    filter: blur(1.1rem);
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.biografia, .vision, .glosario, .ethic-analysis {
+    background: #0b0014;
+    position: relative;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    margin-bottom: auto;
+}
+
+.titulo-seccion {
+    position: relative;
+    width: max-content;
+}
+
+.titulo-seccion::before {
+    content: "";
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    position: absolute;
+    width: 100%;
+    height: 0.23rem;
+    bottom: 0;
+    left: 0;
+    border-radius: 5rem;
+}
+
+ol {
+    list-style:disc;
+    padding-left: 2rem;
+}
+
+ol li {
+    margin-top: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+ol li::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: linear-gradient(135deg, #ffaa5b, #ff3300);
+    border-radius: 50%;
+}
+
+section.about-ai {
+    margin-top: 4rem;
+    width: 100%;
+    min-height: 95vh;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 9%;
+}
+
+.inicio {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contenido-inicio h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span.yo{
+    color: transparent;
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.contenido-inicio h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+#fotoyo {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s linear;
+    box-shadow: 0 0 2rem 0.2rem #ff9c31;
+}
+#fotoyo:hover {
+    scale: 1.02;
+    box-shadow: 0 0 2rem 0.5rem #ff9c31;
+    cursor: default;
+}
+section.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-contenedor {
+    margin-top: 0rem;
+}
+
+.button-link {
+    margin: 0 0.5rem 5% 0.5rem;
+    display: inline-block;
+    padding: 30px 90px;
+    background: transparent;
+    color: #ff9531;
+    border: 2px solid #ff9531;
+    text-decoration: none;
+    border-radius: 19px;
+    font-size: 32px;
+    transition: 0.3s ease;
+}
+
+.button-link:hover {
+    border: none;
+    scale: 1.1;
+    background: linear-gradient(135deg, #ffc531, #ff9531, #ff5531);
+    color: #110229;
+        box-shadow: 0 0 1.3rem #ff5a31;
+        text-shadow: 0 0 0.3rem #110929;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-link, .contacto span {
+    color: #ceccd4;
+    transition: 0.3s ease;
+}
+
+.contacto-link:hover {
+    color: #ff9531;
+    text-shadow: 0 0 0.3rem #ff9531;
+    scale: 1.1;
+}
+.contacto span:hover {
+    color: #ff9531;
+    transition: 0.3s ease;
+}
+footer {
+    background: #110229;
+    color: #ceccd4;
+    padding: 10px;
+    border-top: 1px solid #ff9531;
+    text-align: center;
+}
