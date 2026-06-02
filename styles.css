@@ -149,11 +149,11 @@ section.sobre-mi {
     inherits: false;
 }
 
-.biografia::after, .biografia::before, .vision::after, .vision::before, .glosario::after, .glosario::before {
+.biografia::after, .biografia::before, .vision::after, .vision::before, .glosario::after, .glosario::before, .ethic-anal::after, .ethic-anal::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 99.5%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) ;
@@ -164,7 +164,7 @@ section.sobre-mi {
     animation: spin 4s linear infinite;
 }
 
-.biografia::before, .vision::before, .glosario::before {
+.biografia::before, .vision::before, .glosario::before, .ethic-anal::before {
     filter: blur(1.1rem);
     opacity: 0.7;
 }
@@ -178,13 +178,51 @@ section.sobre-mi {
     }
 }
 
-.biografia, .vision, .glosario {
+.biografia, .vision, .glosario, .ethic-anal {
     background: #0b0014;
     position: relative;
     padding: 2rem;
     border-radius: 1rem;
     margin-top: 4rem;
     margin-bottom: auto;
+}
+
+.titulo-seccion {
+    position: relative;
+    width: max-content;
+}
+
+.titulo-seccion::before {
+    content: "";
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    position: absolute;
+    width: 100%;
+    height: 0.23rem;
+    bottom: 0;
+    left: 0;
+    border-radius: 5rem;
+}
+
+ol {
+    list-style:disc;
+    padding-left: 2rem;
+}
+
+ol li {
+    margin-top: 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+ol li::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: linear-gradient(135deg, #ffaa5b, #ff3300);
+    border-radius: 50%;
 }
 
 section.about-ai {
@@ -297,3 +335,4 @@ footer {
     border-top: 1px solid #ff9531;
     text-align: center;
 }
+
