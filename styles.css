@@ -71,7 +71,7 @@ nav a:hover, nav a.active {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 25%;
+        width: 50%;
         border-left: 0.2rem solid #ff9531;
         border-bottom: 0.2rem solid #ff9531;
         border-bottom-left-radius: 2rem;
@@ -86,7 +86,7 @@ nav a:hover, nav a.active {
     nav a {
         display: block;
         font-size: 1.8rem;
-        margin: 2.8rem 0;
+        margin: 2.2rem 0;
     }
 
     nav a:hover, nav a.active {
@@ -94,7 +94,29 @@ nav a:hover, nav a.active {
         border-radius: 0.5rem;
     }
 
+    section.inicio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 6%;
+        gap: 2rem;
+    }
+
+    .foto-inicio {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .foto-inicio img {
+        width: 100%;
+        height: auto;
+        border-radius: 2rem;
+        max-width: 420px;
+    }
+
     .contenido-inicio {
+        width: 100%;
+        max-width: 640px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -102,11 +124,53 @@ nav a:hover, nav a.active {
 
     .contenido-inicio h1 {
         position: relative;
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .contenido-inicio h3 {
+        font-size: 1.9rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav {
+        position: flex ;
+        justify-content: center;
+        align-items: center;
+        border-right: 0.2rem solid #ff9531;
+        border-bottom: 0.2rem solid #ff5931;
+        right: 10%;
+        width:80%;
+        border-bottom-right-radius: 2rem;
+    }
+
+
+    section.inicio {
+        padding: 2.5rem 4%;
+    }
+
+    .contenido-inicio h1 {
+        font-size: 4rem;
+    }
+
+    .contenido-inicio h3 {
+        font-size: 1.6rem;
+    }
+
+    .logo {
         font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        margin: 1rem 1.5rem;
     }
 }
 
