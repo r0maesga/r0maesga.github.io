@@ -11,7 +11,18 @@
 
 p, h1, h2, h3, h4, h5, h6 {
     cursor: default;
+    text-align: justify;
 }
+
+.contenido-inicio h1 {
+        font-size: 20vw;
+        text-align: center;
+    }
+
+    .contenido-inicio h3 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
 
 body {
     width: 100%;
@@ -35,8 +46,6 @@ header {
     z-index: 1000;
 }
 
-
-
 .logo {
     font-size: 2.5rem;
     color: transparent;
@@ -50,6 +59,11 @@ header {
 .logo:hover {
     scale: 1.2;
     color: #fff;
+}
+
+nav {
+    position: absolute;
+    right: 3%;
 }
 
 .back-btn a {
@@ -129,14 +143,13 @@ nav a:hover, nav a.active {
 
     .foto-inicio {
         width: 100%;
-        max-width: 420px;
     }
 
     .foto-inicio img {
         width: 100%;
+        min-width: 15rem;
         height: auto;
         border-radius: 2rem;
-        max-width: 420px;
     }
 
     .contenido-inicio {
@@ -182,7 +195,7 @@ nav a:hover, nav a.active {
     }
 
     .contenido-inicio h1 {
-        font-size: 4rem;
+        font-size: 20vw;
     }
 
     .contenido-inicio h3 {
@@ -194,9 +207,14 @@ nav a:hover, nav a.active {
     }
 
     nav a {
-        font-size: 1.5rem;
-        margin: 0rem 1.5rem;
+        font-size: 5vw;
+        margin: 0rem 1rem;
+        text-align: center;
     }
+
+    nav a:hover, nav a.active {
+    border-bottom: none;
+}
 }
 
 section.inicio {
@@ -348,7 +366,9 @@ span.yo{
     content: "";
     position: absolute;
     width: 32vw;
+    min-width: 15rem;
     height: 43vw;
+    min-height: 21rem;
     background: linear-gradient(135deg, #ffe600, #ff0000);
     border-radius: 50%;
     filter: blur(2rem);
