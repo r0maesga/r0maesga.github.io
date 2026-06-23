@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -188,6 +187,7 @@ nav a:hover, nav a.active {
         right: 15%;
         width: 70%;
         border-bottom-right-radius: 2rem;
+        min-height: 3.6rem;
     }
 
     section.inicio {
@@ -207,7 +207,7 @@ nav a:hover, nav a.active {
     }
 
     nav a {
-        font-size: 5vw;
+        font-size: 3vw;
         margin: 0rem 1rem;
         text-align: center;
     }
@@ -324,10 +324,53 @@ section.sobre-mi, section.about-ai, section.project {
 }
 
 .year, .fyear {
-    font-size: 1.5rem;
     font-weight: 700;
-    color: #ffb031;
-    margin-bottom: 0.5rem;
+    color: transparent;
+    background: linear-gradient(135deg, #ff9531 0%, #ff5a31 20%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.ethic-analysis h3 strong {
+    color: transparent;
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.concept-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    grid-auto-rows: max-content;
+    grid-auto-columns: 1fr 1fr;
+    background-color: #ff6600;
+    grid-template-areas: "box1 box2" 
+                         "box3 box4" 
+                         "box5 box5" ;
+    gap: 0.1em;
+    padding: 0.1em;
+}
+
+.concept-container div {
+    background-color: #0b0014;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+.concept-container h3 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.concept-container h3 strong {
+    color: transparent;
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 ol {
@@ -483,12 +526,4 @@ footer {
 
 footer p, footer p {
     text-align: center;
-}
-
-@view-transition {
-    navigation: auto;
-}
-
-::view-transition-group(main) {
-    animation-duration: 5s;
 }
