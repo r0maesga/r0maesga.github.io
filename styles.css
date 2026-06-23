@@ -229,7 +229,7 @@ section.inicio {
     padding: 5rem 9%;
 }
 
-section.sobre-mi, section.about-ai, section.projecto {
+section.sobre-mi, section.about-ai, section.project {
     margin-top: 4rem;
     width: 100%;
     min-height: 95vh;
@@ -244,7 +244,7 @@ section.sobre-mi, section.about-ai, section.projecto {
     inherits: false;
 }
 
-.projecto::after, .projecto::before, .history::after, .history::before, .biografia::after, .biografia::before, .vision::after, .vision::before, .glosario::after, .glosario::before, .ethic-analysis::after, .ethic-analysis::before {
+.ai-concepts::after, .ai-concepts::before, .projecto::after, .projecto::before, .history::after, .history::before, .biografia::after, .biografia::before, .vision::after, .vision::before, .glosario::after, .glosario::before, .ethic-analysis::after, .ethic-analysis::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -259,7 +259,7 @@ section.sobre-mi, section.about-ai, section.projecto {
     animation: spin 4s linear infinite;
 }
 
-.projecto::before, .history::before, .biografia::before, .vision::before, .glosario::before, .ethic-analysis::before {
+.ai-concepts::before, .projecto::before, .history::before, .biografia::before, .vision::before, .glosario::before, .ethic-analysis::before {
     filter: blur(1.1rem);
     opacity: 0.7;
 }
@@ -273,7 +273,7 @@ section.sobre-mi, section.about-ai, section.projecto {
     }
 }
 
-.projecto, .history, .biografia, .vision, .glosario, .ethic-analysis {
+.ai-concepts, .projecto, .history, .biografia, .vision, .glosario, .ethic-analysis {
     background: #0b0014;
     position: relative;
     padding: 2rem;
