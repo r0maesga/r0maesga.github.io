@@ -190,7 +190,6 @@ nav a:hover, nav a.active {
         border-bottom-right-radius: 2rem;
     }
 
-
     section.inicio {
         padding: 2.5rem 4%;
     }
@@ -217,7 +216,7 @@ nav a:hover, nav a.active {
     border-bottom: none;
     border-top: 0.2rem solid #ff9531;
     border-radius: 0.2rem;
-    border-radius: %;
+    border-radius: 0.2rem;
     }
 }
 
@@ -230,7 +229,7 @@ section.inicio {
     padding: 5rem 9%;
 }
 
-section.sobre-mi {
+section.sobre-mi, section.about-ai, section.projecto {
     margin-top: 4rem;
     width: 100%;
     min-height: 95vh;
@@ -245,7 +244,7 @@ section.sobre-mi {
     inherits: false;
 }
 
-.biografia::after, .biografia::before, .vision::after, .vision::before, .glosario::after, .glosario::before, .ethic-analysis::after, .ethic-analysis::before {
+.projecto::after, .projecto::before, .history::after, .history::before, .biografia::after, .biografia::before, .vision::after, .vision::before, .glosario::after, .glosario::before, .ethic-analysis::after, .ethic-analysis::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -260,7 +259,7 @@ section.sobre-mi {
     animation: spin 4s linear infinite;
 }
 
-.biografia::before, .vision::before, .glosario::before, .ethic-analysis::before {
+.projecto::before, .history::before, .biografia::before, .vision::before, .glosario::before, .ethic-analysis::before {
     filter: blur(1.1rem);
     opacity: 0.7;
 }
@@ -274,7 +273,7 @@ section.sobre-mi {
     }
 }
 
-.biografia, .vision, .glosario, .ethic-analysis {
+.projecto, .history, .biografia, .vision, .glosario, .ethic-analysis {
     background: #0b0014;
     position: relative;
     padding: 2rem;
@@ -285,7 +284,6 @@ section.sobre-mi {
 
 .titulo-seccion {
     position: relative;
-
 }
 
 .titulo-seccion::before {
@@ -297,6 +295,39 @@ section.sobre-mi {
     bottom: 0;
     left: 0;
     border-radius: 5rem;
+}
+
+.history-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.history-content::before {
+    content: "";
+    background: linear-gradient(135deg, #ff5a31, #ff9531, #ff5a31);
+    position: absolute;
+    height: 100%;
+    width: 0.2rem;
+    left: 0;
+    border-radius: 5rem;
+}
+
+.history-content::after {
+    content: "";
+    background: linear-gradient(90deg, #ff5a31, #ff9531, transparent);
+    position: absolute;
+    bottom: -0.6rem;
+    width: 100%;
+    height: 0.2rem;
+    left: 0;
+    border-radius: 5rem;
+}
+
+.year, .fyear {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffb031;
+    margin-bottom: 0.5rem;
 }
 
 ol {
@@ -327,15 +358,6 @@ ol li::before, ol li::after {
 ol li::before{
     filter: blur(1.1em);
     opacity: 100%;
-}
-
-section.about-ai {
-    margin-top: 4rem;
-    width: 100%;
-    min-height: 95vh;
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 9%;
 }
 
 .inicio {
