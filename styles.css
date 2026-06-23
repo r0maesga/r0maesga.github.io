@@ -548,6 +548,15 @@ section.btn {
     background-clip: text;
 }
 
+.portfolio-requirements {
+    margin-left: 1rem;
+}
+
+.portfolio-requirements li {
+    margin: 0.3rem 0 0.3rem 0;
+
+}
+
 .done {
     color: transparent;
     background: linear-gradient(135deg, #45ff3f, #5dff75, #b4ffb4);
