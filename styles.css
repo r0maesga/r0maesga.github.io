@@ -338,6 +338,32 @@ section.sobre-mi, section.about-ai, section.project {
     background-clip: text;
 }
 
+.ethic-analysis h3 {
+    position: relative;
+    margin-left: 1rem;
+}
+
+.ethic-analysis h3::before{
+    content: "";
+    background: #ff6600;
+    position: absolute;
+    height: 100%;
+    width: 0.2rem;
+    left: -1rem;
+    border-radius: 5rem;
+}
+
+.ethic-analysis h3::after {
+    content: "";
+    background: #ff6600;
+    position: absolute;
+    height: 75%;
+    width: 0.2rem;
+    right: -1rem;
+    top: 15%;
+    border-radius: 5rem;
+}
+
 .concept-container {
     display: grid;
     align-items: center;
@@ -493,6 +519,59 @@ section.btn {
     background: linear-gradient(135deg, #ffc531, #ff9531, #ff5531);
     color: #070111;
     box-shadow: 0 0 1.3rem #ff5a31;
+}
+
+.project-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    grid-auto-rows: max-content;
+    grid-auto-columns: 1fr;
+    background-color: #ff6600; ;
+    gap: 0.1em;
+    padding: 0.1em;
+}
+
+.project-container div {
+    background-color: #0b0014;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+.project-container h3 strong {
+    color: transparent;
+    background: linear-gradient(135deg, #ff9531, #ff5a31);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.done {
+    color: transparent;
+    background: linear-gradient(135deg, #45ff3f, #5dff75, #b4ffb4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 700;
+    text-shadow: 0 0 0.4rem #7fff9f;
+    filter: drop-shadow(0 0 0.4rem #7fff9f);
+    animation: glow-pulse-green 2s ease-in-out infinite;
+}
+
+.done::before {
+    content: "✔ ";
+}
+
+@keyframes glow-pulse-green {
+    0%, 100% {
+        text-shadow: 0 0 0.4rem #7fff9f;
+        filter: drop-shadow(0 0 0.4rem #7fff9f);
+    }
+    50% {
+        text-shadow: 0 0 0.8rem #7fff9f;
+        filter: drop-shadow(0 0 0.8rem #7fff9f);
+    }
 }
 
 .contacto {
