@@ -611,7 +611,9 @@ footer {
     padding: 10px;
     border-top: 1px solid #ff9531;
 }
-
+@view-transition {
+    navigation: auto;
+}
 footer p, footer p {
     text-align: center;
 }
