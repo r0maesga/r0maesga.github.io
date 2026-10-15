@@ -27,7 +27,7 @@ body {
     width: 100%;
     height: 100%;
     overflow-x: auto;
-    background: linear-gradient(130deg, #110229 0%, #0b0014 100%);
+    background: linear-gradient(155deg, #380028, #110229, #000044);
     color: #CECCD4;
 }
 
@@ -38,7 +38,7 @@ header {
     left: 0;
     width: 100%;
     padding: 1rem 3%;
-    background-color: #0b0014;
+    background-color: #150024;
     border-bottom: 0.2rem solid #ff9531;
     display: flex;
     justify-content: space-between;
@@ -606,7 +606,7 @@ section.btn {
     transition: 0.3s ease;
 }
 footer {
-    background: #110229;
+    background: #290033;
     color: #ceccd4;
     padding: 10px;
     border-top: 1px solid #ff9531;
